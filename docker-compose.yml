@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  churn-api:
+    build: .
+    image: ml-deployment-pipeline:latest
+    container_name: churn-api
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
